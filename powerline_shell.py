@@ -8,17 +8,13 @@ Should be updated when the projects are updated
 from os import getcwd
 from os.path import expanduser, join
 
-import subprocess
+from util import run_command
 
 def powerline_shell():
     # Install fonts for powerline-shell
-    command_setup_powerline_font = 'sudo apt-get install fonts-powerline'
-    process = subprocess.Popen(command_setup_powerline_font.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
+    run_command('sudo apt-get install fonts-powerline')
     # Install powerline-shell
-    command_setup_powerline_shell = 'pip install powerline-shell'
-    process = subprocess.Popen(command_setup_powerline_shell.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
+    run_command('pip install powerline-shell')
     # Add some instruction to .bashrc to use powerline-shell
     path_to_bashrc = join(expanduser("~"), ".bashrc")
     path_to_instruction = join(getcwd(), "etc", "bashrc_powerline_shell")
