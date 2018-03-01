@@ -5,10 +5,7 @@ Should be updated when the projects are updated
 - https://github.com/powerline/fonts
 """
 
-from os import getcwd
-from os.path import expanduser, join
-
-from util import run_command
+from util import run_command, join_from_home, join_from_cwd
 
 def powerline_shell():
     # Install fonts for powerline-shell
@@ -16,8 +13,8 @@ def powerline_shell():
     # Install powerline-shell
     run_command('pip install powerline-shell')
     # Add some instruction to .bashrc to use powerline-shell
-    path_to_bashrc = join(expanduser("~"), ".bashrc")
-    path_to_instruction = join(getcwd(), "etc", "bashrc_powerline_shell")
+    path_to_bashrc = join_from_home(".bashrc")
+    path_to_instruction = join_from_cwd("etc", "bashrc_powerline_shell")
     with open(path_to_bashrc, "a+") as outfile:
         with open(path_to_instruction) as infile:
             current_bashrc_content = outfile.readlines()
