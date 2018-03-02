@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle and Plugins
@@ -21,6 +22,7 @@ filetype plugin indent on    " required
 " vim-airline, vim-airline-themes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
+"let g:airline_symbols_ascii = 1	" Use this if you have problem with font
 let g:airline_theme='simple'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,7 +30,6 @@ let g:airline_theme='simple'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set smartindent
 set number
-set encoding=utf-8
 
 set tabstop=4
 set softtabstop=4
