@@ -18,4 +18,5 @@ python main.py -h
 
 - powerline-shell
     - powerline-font: `D2Coding` 폰트를 사용하기 위해 설치
+- vim
 
