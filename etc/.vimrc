@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -21,8 +22,8 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-airline, vim-airline-themes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
-"let g:airline_symbols_ascii = 1	" Use this if you have problem with font
+"let g:airline_powerline_fonts = 1
+let g:airline_symbols_ascii = 1	" Use this if you have problem with font
 let g:airline_theme='simple'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -30,11 +31,14 @@ let g:airline_theme='simple'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set smartindent
 set number
+set hlsearch
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+colorscheme wombat
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts 
