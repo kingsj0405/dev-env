@@ -9,6 +9,7 @@ from util import run_command, join_from_home, join_from_cwd
 
 def powerline_shell():
     # Install fonts for powerline-shell
+    run_command('sudo apt-get install python-pip')
     run_command('sudo apt-get install fonts-powerline')
     # Install powerline-shell
     run_command('pip install powerline-shell')
